@@ -1,6 +1,6 @@
 resource "aws_instance" "dev_server" {
-  ami                         = "ami-0548e5d1cef315c7f" // amzn2-ami-kernel-5.10-hvm-2.0.20220426.0-arm64-gp2
-  instance_type               = "t4g.small"
+  ami                         = "ami-02c3627b04781eada" // Amazon Linux 2 Kernel 5.10 AMI 2.0.20220426.0 x86_64 HVM gp2
+  instance_type               = "t3.small"
   subnet_id                   = var.subnet_id
   iam_instance_profile        = aws_iam_instance_profile.ec2_for_ssm.name
   associate_public_ip_address = true
